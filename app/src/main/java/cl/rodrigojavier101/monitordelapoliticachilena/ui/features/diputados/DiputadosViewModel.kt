@@ -1,11 +1,11 @@
-package cl.antoinette.monitor_politico_econmico.ui.features.diputados
+package cl.rodrigojavier101.monitordelapoliticachilena.ui.features.diputados
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.asLiveData
-import cl.antoinette.monitor_politico_econmico.data.ConnectivityRepository
-import cl.antoinette.monitor_politico_econmico.domain.DiputadosUseCases
-import cl.antoinette.monitor_politico_econmico.domain.pojos.Diputado
+import cl.rodrigojavier101.monitordelapoliticachilena.data.ConnectivityRepository
+import cl.rodrigojavier101.monitordelapoliticachilena.domain.DiputadosUseCases
+import cl.rodrigojavier101.monitordelapoliticachilena.domain.pojos.Diputado
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -15,21 +15,21 @@ import javax.inject.Inject
 @HiltViewModel
 class DiputadosViewModel
 @Inject constructor(
-   private val diputadosUseCase: DiputadosUseCases,
-   connectivityRepository: ConnectivityRepository
+    private val diputadosUseCase: DiputadosUseCases,
+    connectivityRepository: ConnectivityRepository
 ) : ViewModel() {
 
-   var diputadosActualesList = MutableLiveData<List<Diputado>>(mutableListOf())
-   val isOnline = connectivityRepository.isConnected.asLiveData()
+    var diputadosActualesList = MutableLiveData<List<Diputado>>(mutableListOf())
+    val isOnline = connectivityRepository.isConnected.asLiveData()
 
-   init {
-      CoroutineScope(Dispatchers.IO).launch {
-         getDiputadosActualesList()
-      }
-   }
+    init {
+        CoroutineScope(Dispatchers.IO).launch {
+            getDiputadosActualesList()
+        }
+    }
 
-   private suspend fun getDiputadosActualesList() {
-      diputadosActualesList.postValue(diputadosUseCase.invoke())
-   }
+    private suspend fun getDiputadosActualesList() {
+        diputadosActualesList.postValue(diputadosUseCase.invoke())
+    }
 
 }

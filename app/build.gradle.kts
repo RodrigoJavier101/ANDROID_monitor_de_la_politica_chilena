@@ -40,6 +40,9 @@ android {
     }
     buildFeatures {
         compose = true
+        // added
+        buildConfig = true
+        viewBinding = true
     }
 }
 

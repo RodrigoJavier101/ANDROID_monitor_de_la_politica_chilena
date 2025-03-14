@@ -1,4 +1,4 @@
-package cl.antoinette.monitor_politico_econmico.ui.features.diputados
+package cl.rodrigojavier101.monitordelapoliticachilena.ui.features.diputados
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -11,76 +11,76 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
-import cl.antoinette.monitor_politico_econmico.R
-import cl.antoinette.monitor_politico_econmico.databinding.FragmentDiputadosActualesBinding
-import cl.antoinette.monitor_politico_econmico.ui.features.diputados.adapter.DiputadosAdapter
-import cl.antoinette.monitor_politico_econmico.utilities.ExtensionFunctions.Companion.initRecyclerView
-import cl.antoinette.monitor_politico_econmico.utilities.isOnline
+import cl.rodrigojavier101.monitordelapoliticachilena.R
+import cl.rodrigojavier101.monitordelapoliticachilena.databinding.FragmentDiputadosActualesBinding
+import cl.rodrigojavier101.monitordelapoliticachilena.ui.features.diputados.adapter.DiputadosAdapter
+import cl.rodrigojavier101.monitordelapoliticachilena.utilities.ExtensionFunctions.Companion.initRecyclerView
+import cl.rodrigojavier101.monitordelapoliticachilena.utilities.isOnlineN
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class DiputadosFragment : Fragment() {
 
-   private var _binding: FragmentDiputadosActualesBinding? = null
-   private val binding get() = _binding!!
+    private var _binding: FragmentDiputadosActualesBinding? = null
+    private val binding get() = _binding!!
 
-   private val diputadosViewModel by viewModels<DiputadosViewModel>()
-   private lateinit var diputadosAdapter: DiputadosAdapter
+    private val diputadosViewModel by viewModels<DiputadosViewModel>()
+    private lateinit var diputadosAdapter: DiputadosAdapter
 
-   @SuppressLint("InflateParams")
-   override fun onCreateView(
-      inflater: LayoutInflater,
-      container: ViewGroup?,
-      savedInstanceState: Bundle?
-   ): View {
-      _binding = FragmentDiputadosActualesBinding.inflate(layoutInflater)
-      return binding.root
-   }
+    @SuppressLint("InflateParams")
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View {
+        _binding = FragmentDiputadosActualesBinding.inflate(layoutInflater)
+        return binding.root
+    }
 
-   override fun onViewCreated(
-      view: View,
-      savedInstanceState: Bundle?
-   ) {
-      super.onViewCreated(view, savedInstanceState)
-      initList()
-      initUIState()
-      viewEvents()
-   }
+    override fun onViewCreated(
+        view: View,
+        savedInstanceState: Bundle?
+    ) {
+        super.onViewCreated(view, savedInstanceState)
+        initList()
+        initUIState()
+        viewEvents()
+    }
 
-   private fun viewEvents() {
-      binding.backIcon.setOnClickListener {
-         findNavController().navigate(R.id.action_diputadosFragment_to_homeFragment)
-      }
-   }
+    private fun viewEvents() {
+        binding.backIcon.setOnClickListener {
+            findNavController().navigate(R.id.action_diputadosFragment_to_homeFragment)
+        }
+    }
 
-   private fun initUIState() {
+    private fun initUIState() {
 
-      diputadosViewModel.isOnline.observe(viewLifecycleOwner) { isOnline ->
-         if (isOnline || isOnline(requireContext())) {
-            binding.internetMessage.visibility = View.GONE
+        diputadosViewModel.isOnline.observe(viewLifecycleOwner) { isOnline ->
+            if (isOnline || isOnlineN(requireContext())) {
+                binding.internetMessage.visibility = View.GONE
 
-            lifecycleScope.launch {
-               repeatOnLifecycle(Lifecycle.State.STARTED) {
-                  diputadosViewModel.diputadosActualesList.observe(viewLifecycleOwner) {
-                     diputadosAdapter.setItemInTheView(it)
-                  }
-               }
+                lifecycleScope.launch {
+                    repeatOnLifecycle(Lifecycle.State.STARTED) {
+                        diputadosViewModel.diputadosActualesList.observe(viewLifecycleOwner) {
+                            diputadosAdapter.setItemInTheView(it)
+                        }
+                    }
+                }
+
+            } else {
+                binding.internetMessage.visibility = View.VISIBLE
             }
+        }
+    }
 
-         } else {
-            binding.internetMessage.visibility = View.VISIBLE
-         }
-      }
-   }
+    private fun initList() {
+        diputadosAdapter = DiputadosAdapter()
+        initRecyclerView(binding.recyclerViewDiputadosActuales, requireContext(), diputadosAdapter)
+    }
 
-   private fun initList() {
-      diputadosAdapter = DiputadosAdapter()
-      initRecyclerView(binding.recyclerViewDiputadosActuales, requireContext(), diputadosAdapter)
-   }
-
-   override fun onDestroyView() {
-      super.onDestroyView()
-      _binding = null
-   }
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
 }

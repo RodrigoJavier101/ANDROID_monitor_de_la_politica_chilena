@@ -1,10 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_">#FFFFFFFF</color>
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+
+
+
+    <color name="blue">#920A0AE3</color>
+    <color name="orange">#E8BD7C</color>
+    <color name="orange_strong">#ffa500</color>
+    <color name="orange_super">#FF8C00</color>
+    <color name="transparente">#000000</color>
+    <color name="grey">#BCB9B6</color>
+    <!-- ************************************************************ -->
+    <!-- ************************************************************ -->
+    <!-- ************************************************************ -->
+    <!--MAIN COLOR PALLETE-->
+    <color name="white_1">#FFFFFF</color>
+    <color name="white_2">#EEEEEE</color>
+    <color name="green_1">#2EB85E</color>
+    <color name="yellow_1">#FAA220</color>
+    <color name="red_1">#FA5852</color>
+    <color name="red_2">#F30808</color>
+    <color name="blue_1">#1C355E</color>
+    <color name="blue_2">#375484</color>
+    <color name="blue_3">#3DAAFA</color>
+    <color name="blue_4">#1C355E1A</color>
+    <color name="blue_5">#87ceeb</color>
+    <color name="black_1">#000000</color>
+    <color name="black_2">#393737</color>
+    <color name="black_3">#06000000</color>
+    <color name="gray_1">#F5F5F5</color>
+    <color name="gray_2">#BFBFBF</color>
+    <color name="gray_3">#C3CCDA</color>
+    <!-- ************************************************************ -->
+    <!-- ************************************************************ -->
+    <!-- ************************************************************ -->
+    <!--components-->
+    <color name="button_next_text">@color/white_1</color>
+    <color name="edit_text_bg_tint">@color/gray_1</color>
+    <color name="edit_text_text_color">@color/black_2</color>
+    <color name="edit_text_text_color_hint">@color/gray_2</color>
+    <color name="marker_pin_text">@color/white_1</color>
+    <color name="label_text">@color/black_2</color>
+    <color name="footer_text">@color/black_1</color>
+    <color name="terms_and_cond_text_accept">@color/black_2</color>
+    <color name="terms_and_cond_text_termcond">@color/blue_2</color>
+    <color name="welcome_text">@color/black_2</color>
+    <!--dialogs-->
+    <color name="confirm_stopcharge_msg">@color/black_2</color>
+    <color name="confirm_stopcharge_btn_txt_yes">@color/blue_2</color>
+    <color name="confirm_stopcharge_btn_txt_no">@color/white_1</color>
+    <color name="infography_close_x">@color/black_1</color>
+    <color name="infography_state_label">@color/black_1</color>
+    <color name="infography_avalability_label">@color/black_1</color>
+    <color name="infography_text_number_ratio">@color/black_2</color>
+    <color name="infography_text_description">@color/black_1</color>
+    <color name="infography_pin_green">@color/green_1</color>
+    <color name="infography_pin_blue">@color/blue_3</color>
+    <color name="infography_pin_yellow">@color/yellow_1</color>
+    <color name="infography_pin_red">@color/red_1</color>
+    <color name="infography_pin_gray">@color/gray_2</color>
+    <!--fragment-->
+    <color name="fragment_login_skip_session">@color/blue_2</color>
+    <color name="fragment_map_filter_pool_light_txt">@color/white_1</color>
+    <color name="fragment_map_filter_pool_dark_txt">@color/blue_1</color>
+    <color name="fragment_pool_detail_address_txt">@color/blue_1</color>
+    <color name="fragment_pool_detail_bnt_how_to_get_txt">@color/white_1</color>
+    <color name="fragment_signin_already_registered_1_txt">@color/blue_1</color>
+    <color name="fragment_signin_already_registered_2_txt">@color/blue_1</color>
+    <color name="fragment_signin_wrong_credentials_txt">@color/red_2</color>
+    <color name="fragment_connector_detail_address_title">@color/blue_1</color>
+    <color name="fragment_connector_detail_station_txt">@color/blue_1</color>
+    <color name="fragment_connector_detail_station_img_tint">@color/black_2</color>
+    <color name="fragment_connector_detail_type_alias">@color/black_2</color>
+    <color name="fragment_connector_detail_name">@color/black_2</color>
+    <color name="fragment_connector_detail_charge_time_status">@color/black_2</color>
+    <color name="fragment_connector_detail_charge_time_title">@color/black_2</color>
+    <color name="fragment_connector_detail_charge_time">@color/black_2</color>
+    <color name="fragment_connector_detail_charge_kwh_txt_title">@color/black_2</color>
+    <color name="fragment_connector_detail_charge_kwh_txt">@color/black_2</color>
+    <color name="fragment_connector_detail_start_charge_bnt_txt">@color/white_1</color>
+    <color name="fragment_connector_detail_stop_charge_bnt_txt">@color/blue_2</color>
+    <color name="fragment_connector_detail_vourcher_bnt_txt">@color/white_1</color>
+    <!--items-->
+    <color name="item_pool_detail_station_title">@color/black_2</color>
+    <color name="item_pool_detail_connector_icon_tint">@color/black_2</color>
+    <color name="item_pool_detail_connector_conn_name_txt">@color/black_2</color>
+    <color name="item_pool_detail_connector_conn_availability_status_txt">@color/black_2</color>
+    <!--drawable-->
+    <color name="bg_btn_round_corner_normal_solid">@color/blue_2</color>
+    <color name="bg_btn_round_corner_pressed_solid">@color/blue_1</color>
+    <color name="bg_btn_round_corner_white_border_normal_solid">@color/white_1</color>
+    <color name="bg_btn_round_corner_white_border_normal_stroke">@color/blue_1</color>
+    <color name="bg_btn_round_corner_white_border_pressed_solid">@color/blue_4</color>
+    <color name="bg_btn_round_corner_white_border_pressed_stroke">@color/blue_1</color>
+    <color name="bg_card_shadow">@color/black_3</color>
+    <color name="bg_card_background">@color/white_1</color>
+    <color name="bg_rounded_dialog_solid">@color/white_1</color>
+    <color name="bg_switch_custom_track_checked_false_solid">@color/white_1</color>
+    <color name="bg_switch_custom_track_checked_false_stroke">@color/blue_2</color>
+    <color name="bg_switch_custom_track_checked_true_solid">@color/blue_2</color>
+    <color name="bg_switch_custom_track_checked_true_stroke">@color/blue_2</color>
+    <color name="bg_switch_thumb_false_shape_solid">@color/white_1</color>
+    <color name="bg_switch_thumb_false_shape_stroke">@color/blue_1</color>
+    <color name="bg_switch_thumb_true_shape_solid">@color/white_1</color>
+    <color name="bg_switch_thumb_true_shape_stroke">@color/blue_1</color>
+    <color name="divider_line_dotted_stroke">@color/gray_2</color>
+    <color name="subitem_status_available">@color/green_1</color>
+    <color name="subitem_status_connected">@color/green_1</color>
+    <color name="subitem_status_busy">@color/yellow_1</color>
+    <color name="subitem_status_not_available">@color/red_1</color>
+    <color name="subitem_status_default">@color/red_1</color>
+    <color name="fragment_map_pin_green">@color/green_1</color>
+    <color name="fragment_map_pin_blue">@color/blue_3</color>
+    <color name="fragment_map_pin_yellow">@color/yellow_1</color>
+    <color name="fragment_map_pin_red">@color/red_1</color>
+    <color name="comp_icon_eye_tint">@color/black_2</color>
+    <color name="bottom_menu_txt_config_light">@color/white_1</color>
+    <color name="bottom_menu_txt_config_dark">@color/blue_1</color>
+    <color name="bottom_menu_txt_map_light">@color/white_1</color>
+    <color name="bottom_menu_txt_map_dark">@color/blue_1</color>
+    <color name="bottom_menu_txt_historial_light">@color/white_1</color>
+    <color name="bottom_menu_txt_historial_dark">@color/blue_1</color>
+    <color name="bottom_menu_txt_upload_blocked">@color/gray_3</color>
+    <color name="bottom_menu_txt_upload_dark">@color/blue_1</color>
 </resources>

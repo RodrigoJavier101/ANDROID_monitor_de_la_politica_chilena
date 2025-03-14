@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/blackboard1"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/padding_normal_4dp"
+    tools:context=".ui.activities.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/header_mark"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearpicture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_icon"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/arrow_r"
+            android:backgroundTint="@color/gray_3"
+            android:contentDescription="@string/content_description" />
+
+    </LinearLayout>
+    <!--picture-->
+
+    <LinearLayout
+        android:id="@+id/linearpicture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/scrollview"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_mark">
+
+        <ImageView
+            android:id="@+id/picture"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:contentDescription="@string/content_description"
+            app:layout_constraintBottom_toTopOf="@+id/scrollview"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_mark"
+            tools:src="@drawable/portada"
+            />
+
+
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearpicture">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/name_detail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:textColor="@color/white_2"
+                android:textSize="35sp"
+                app:layout_constraintBottom_toTopOf="@+id/partido_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="No hay dato por el momento" />
+
+            <TextView
+                android:id="@+id/partido_detail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:textColor="@color/white_2"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/bancada_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/name_detail"
+                android:text="partido: del chorro" />
+
+            <TextView
+                android:id="@+id/bancada_detail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:textColor="@color/white_2"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/distrito_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/partido_detail"
+                tools:text="bancada: del chorro del chorro del chorro del chorro del chorro" />
+
+            <TextView
+                android:id="@+id/distrito_detail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:textColor="@color/white_2"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/region_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bancada_detail"
+                tools:text="distrito: del chorro" />
+
+            <TextView
+                android:id="@+id/region_detail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:textColor="@color/white_2"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/comunas_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/distrito_detail"
+                tools:text="region del chorro" />
+
+            <TextView
+                android:id="@+id/comunas_detail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:textColor="@color/white_2"
+                android:textSize="25sp"
+                app:layout_constraintBottom_toTopOf="@+id/periodo_detail"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/region_detail"
+                tools:text="comunas del chorro comunas del chorro comunas del chorro comunas del chorro comunas del chorro comunas del chorro comunas del chorro comunas del chorro " />
+
+            <TextView
+                android:id="@+id/periodo_detail"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:textColor="@color/white_2"
+                android:textSize="25sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/comunas_detail"
+                tools:text="periodo del chorro" />
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

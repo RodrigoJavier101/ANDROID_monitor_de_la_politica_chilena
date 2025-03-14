@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">Monitor de la Politica Chilena</string>
+    <string name="app_name">Monitor Político</string>
+    <string name="splash_title">Monitor Político</string>
+    <string name="content_description">content description</string>
+
+    <string name="title_diputados_actuales">Diputados Actuales</string>
+    <string name="button_ir_a_diputados_actuales">Diputados</string>
+    <string name="text_button_volver">Volver</string>
+    <string name="text_diputados_actuales">Diputados</string>
+    <string name="progress_cargando">Cargando datos…</string>
+    <string name="text_for_header_without_connection">No tienes conexión\nIntenta nuevamente, por favor.</string>
+    <string name="text_without_connection">Ups! There is no internet.</string>
+    <string name="text_without_response">Ups! There is no internet connection</string>
+    <string name="recall_data">Recall data</string>
 </resources>

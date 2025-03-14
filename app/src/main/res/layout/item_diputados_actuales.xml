@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/margin_left_diputados_actuales">
+
+    <LinearLayout
+        android:id="@+id/linear_layout_diputados_actuales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/image_view_diputado_actual"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            tools:srcCompat="@drawable/portada"
+            android:layout_margin="@dimen/padding_normal_8dp" />
+
+        <TextView
+            android:id="@+id/text_view_nombre_diputado_actual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/ubuntu_light"
+            android:textColor="@color/gray_3"
+            android:textSize="26sp"
+            tools:text="Nombre del chorro" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
